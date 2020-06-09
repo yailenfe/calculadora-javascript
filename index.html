@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b6e248d90f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h2>Calculator</h2>
+            <i class="fab fa-accusoft"></i>
+        </header>
+        <div class="container-number">
+
+            <div class="container-pantalla-number">
+                <input type="text" id="textNumber">
+                <hr>
+                <span id="textError"></span>
+
+            </div>
+
+            <div class="container-menu-number">
+                <div>
+                    <button style="background-color: rgb(175, 175, 175);">MC</button>
+                    <button onclick="raiz()" style="background-color: rgb(175, 175, 175);">√</button>
+                    <button onclick="retur()" style="background-color: rgb(175, 175, 175);">→</button>
+                    <button style="background-color: red;">AC</button>
+                    <button onclick="borrar()" style="background-color: red;">C</button>
+
+                </div>
+                <div>
+                    <button style="background-color: rgb(175, 175, 175);">MR</button>
+                    <button onclick="actualizar(7)">7</button>
+                    <button onclick="actualizar(4)">4</button>
+                    <button onclick="actualizar(1)">1</button>
+                    <button onclick="actualizar(0)">0</button>
+                </div>
+
+                <div>
+                    <button style="background-color: rgb(175, 175, 175);">M-</button>
+                    <button onclick="actualizar(8)">8</button>
+                    <button onclick="actualizar(5)">5</button>
+                    <button onclick="actualizar(2)">2</button>
+                    <button onclick="actualizar(00)">00</button>
+                </div>
+                <div>
+                    <button style="background-color: rgb(175, 175, 175);">M+</button>
+                    <button onclick="actualizar(9)">9</button>
+                    <button onclick="actualizar(6)">6</button>
+                    <button onclick="actualizar(3)">3</button>
+                    <button onclick="actualizar('.')">.</button>
+                </div>
+                <div>
+                    <button onclick="actualizar('(')" style="background-color: rgb(175, 175, 175);">(</button>
+                    <button onclick="actualizar('/')" class="style-grey-oscuro">/</button>
+                    <button onclick="actualizar('*')" class="style-grey-oscuro">*</button>
+                    <button onclick="actualizar('+')" class="style-grande" style="background-color: grey;">+</button>
+
+                </div>
+                <div>
+                    <button onclick="actualizar(')')" style="background-color:rgb(175, 175, 175);">)</button>
+                    <button onclick="actualizar('%')" style="background-color:rgb(175, 175, 175);">%</button>
+                    <button onclick="actualizar('-')" class="style-grey-oscuro">-</button>
+                    <button onclick="result()" class="style-grande" style="background-color: rgba(0, 14, 207, 0.986);">=</button>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <script src="index.js"></script>
+
+</body>
+
+</html>
