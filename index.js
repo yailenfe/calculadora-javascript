@@ -10,11 +10,12 @@ function raiz() {
 }
 
 function result() {
+    const span = document.getElementById("textError");
     const input = document.getElementById("textNumber");
     try {
         input.value = eval(input.value);
+        span.innerText = ""
     } catch (error) {
-        const span = document.getElementById("textError");
         span.innerText = "expresion malformada"
 
     }
@@ -32,3 +33,18 @@ function retur() {
     input.value = input.value.substring(0, input.value.length - 1)
 
 }
+
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.getElementById("reloj").innerText = horaImprimible;
+
+    
+}
+
+setInterval(mueveReloj, 1000);

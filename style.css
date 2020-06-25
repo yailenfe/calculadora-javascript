@@ -4,72 +4,90 @@ body {
 }
 
 .container {
-    background-color: rgba(85, 238, 192, 0.5);
-    margin: 50px;
-    width: 400px;
-    height: 530px;
+    background-color: #151515;
+    width: 375px;
+    height: 515px;
 }
 
 header {
     display: flex;
+    height: 25px;
     justify-content: space-between;
-    padding: 0px 5px;
-    margin: 0px 30px;
+    padding: 5px;
+}
+.icono {
+    font-size: 12px;
+    margin-left: 3px;
 }
 
-header i {
-    padding-top: 28px;
+.cerrar {
+    color: rgb(204, 39, 39);
+}
+.maximizar {
+    color: rgb(212, 165, 36);
+}
+
+.minimizar {
+    color: rgb(9, 184, 53);
+}
+.calculator {
+    color: white;
+}
+.reloj {
+    color: #ccc9c9;
+}
+.Error {
+    color: white;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #929292;
 }
 
 .container-pantalla-number {
-    height: 100px;
-    background-color: white;
-    margin: 0px 30px;
-    border-radius: 10px;
-    border: 3px solid rgba(33, 34, 34, 0.5);
+    height: 120px;
+    width: 374px;
+    background-color: #151515;
+    position: relative;
 }
 
-.container-pantalla-number input[type=text] {
+.container-pantalla-number input[type="text"] {
     border: none;
-    width: 312px;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin: 0;
+    width: 290px;
+    padding: 38px;
     outline: none;
     font-size: 36px;
-}
-
-hr {
-    width: 300;
-    background-color: hotpink;
-}
-
-span {
-    margin-left: 10px;
+    color: white;
+    background-color: #151515;
 }
 
 .container-menu-number {
-    margin: 15px 30px;
-    height: 300px;
+    height: 370x;
     display: flex;
 }
 
-.container-menu-number div {
-    width: 25%;
-}
-
 .container-menu-number button {
-    width: 40px;
-    height: 40px;
-    margin: 10px 8px;
-    border-radius: 5px;
+    width: 75px;
+    height: 60px;
     outline: none;
+    color: #929292;
+    background-color: #282828;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #080808;
+    cursor: pointer;
+}
+.container-menu-number button:hover {
+    background-color: #363636;
+    transition: all 0.3s linear;
+}
+.container-menu-number button:active {
+    background-color: #494848;
 }
 
 .container-menu-number div .style-grande {
-    height: 100px;
-}
-
-.container-menu-number div .style-grey-oscuro {
-    background-color: grey;
+    height: 120px;
+    background-color: #fec900;
+    color: #282828;
 }
