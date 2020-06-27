@@ -1,50 +1,25 @@
-function actualizar(number) {
-    const input = document.getElementById("textNumber");
-    input.value += number;
+const express = require("express");
+const app = express();
+const path = require("path");
+const port = process.env.PORT || 5000;
+
+//Static file declaration
+app.use(express.static(path.join(__dirname, "client")));
+
+//production mode
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "client")));
+    app.get("*", (req, res) => {
+        res.sendfile(path.join((__dirname = "client/index.html")));
+    });
 }
 
-function raiz() {
-    const input = document.getElementById("textNumber");
-    input.value = Math.sqrt(input.value);
+//build mode
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/public/index.html"));
+});
 
-}
-
-function result() {
-    const span = document.getElementById("textError");
-    const input = document.getElementById("textNumber");
-    try {
-        input.value = eval(input.value);
-        span.innerText = ""
-    } catch (error) {
-        span.innerText = "expresion malformada"
-
-    }
-
-
-}
-
-function borrar() {
-    const input = document.getElementById("textNumber");
-    input.value = 0;
-}
-
-function retur() {
-    const input = document.getElementById("textNumber");
-    input.value = input.value.substring(0, input.value.length - 1)
-
-}
-
-function mueveReloj(){
-    momentoActual = new Date()
-    hora = momentoActual.getHours()
-    minuto = momentoActual.getMinutes()
-    segundo = momentoActual.getSeconds()
-
-    horaImprimible = hora + " : " + minuto + " : " + segundo
-
-    document.getElementById("reloj").innerText = horaImprimible;
-
-    
-}
-
-setInterval(mueveReloj, 1000);
+//start server
+app.listen(port, (req, res) => {
+    console.log(`server listening on port: ${port}`);
+});
